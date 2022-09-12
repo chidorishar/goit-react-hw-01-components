@@ -1,3 +1,4 @@
+import user from 'data/user.json';
 import { Profile } from 'components/AllComponents';
 
 export const App = () => {
