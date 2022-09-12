@@ -8,11 +8,11 @@ export const App = () => {
   return (
     <>
       <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
+        username={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        avatar={userData.avatar}
+        stats={userData.stats}
       />
       <Statistics title="Upload stats" stats={statisticsData} />
       <Statistics stats={statisticsData} />
