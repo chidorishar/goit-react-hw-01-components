@@ -66,7 +66,7 @@ const StatCaption = styled.span`
   font-weight: 500;
 
   display: block;
-  margin: 0 0 10px;
+  margin: 0 0 5px;
 `;
 
 const StatNumbers = styled.span`
