@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/common/Box/Box.styled';
+
 import {
-  Table,
   TableHead,
   TableHeadRow,
   TableHeadCaption,
@@ -9,9 +10,21 @@ import {
   TableData,
 } from './TransactionHistory.styled';
 
-function TransactionHistory({ items }) {
+export function TransactionHistory({ items }) {
   return (
-    <Table>
+    <Box
+      width="cardWide"
+      mt={4}
+      mr="auto"
+      mb={4}
+      ml="auto"
+      borderRadius="normal"
+      overflow="hidden"
+      textAlign="center"
+      boxShadow="small"
+      as="table"
+      borderCollapse="collapse"
+    >
       <TableHead>
         <TableHeadRow>
           <TableHeadCaption>Type</TableHeadCaption>
@@ -29,7 +42,7 @@ function TransactionHistory({ items }) {
           </TableBodyRow>
         ))}
       </TableBody>
-    </Table>
+    </Box>
   );
 }
 
@@ -43,5 +56,3 @@ TransactionHistory.propTypes = {
     })
   ).isRequired,
 };
-
-export { TransactionHistory };
