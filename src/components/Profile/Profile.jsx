@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/common/Box/Box.styled';
 import {
-  ProfileCard,
   Description,
   AvatarImg,
   PersonInfo,
@@ -13,7 +13,17 @@ import {
 
 function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <ProfileCard>
+    <Box
+      width="cardNormal"
+      mt={4}
+      mr="auto"
+      ml="auto"
+      pt={4}
+      textAlign="center"
+      borderRadius="normal"
+      overflow="hidden"
+      boxShadow="medium"
+    >
       <Description>
         <AvatarImg src={avatar} alt="User avatar" />
         <PersonInfo>{username}</PersonInfo>
@@ -41,7 +51,7 @@ function Profile({ username, tag, location, avatar, stats }) {
           </StatNumbers>
         </StatItem>
       </StatList>
-    </ProfileCard>
+    </Box>
   );
 }
 
