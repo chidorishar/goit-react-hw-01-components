@@ -1,27 +1,33 @@
+import { getRandomHSLColor } from 'utils/getRandomColor';
+import { Box } from 'components/common/Box/Box.styled';
 import {
-  StatisticsCard,
   CardTitle,
-  StatisticsList,
   StatisticItem,
   StatisticsCaption,
   StatisticNumber,
 } from './Statistics.styled';
 
-function Statistics({ title = '', stats }) {
+export function Statistics({ title = '', stats }) {
   return (
-    <StatisticsCard>
+    <Box
+      width="cardWide"
+      mt={4}
+      mr="auto"
+      ml="auto"
+      textAlign="center"
+      boxShadow="medium"
+      as="section"
+    >
       {title ? <CardTitle>{title}</CardTitle> : null}
 
-      <StatisticsList>
+      <Box display="flex" m={0} p={0} as="ul">
         {stats.map(({ id, label, percentage }) => (
-          <StatisticItem key={id}>
+          <StatisticItem key={id} backgroundColor={getRandomHSLColor()}>
             <StatisticsCaption>{label}</StatisticsCaption>
             <StatisticNumber>{percentage}%</StatisticNumber>
           </StatisticItem>
         ))}
-      </StatisticsList>
-    </StatisticsCard>
+      </Box>
+    </Box>
   );
 }
-
-export { Statistics };

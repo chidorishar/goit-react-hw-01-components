@@ -1,22 +1,28 @@
 import styled from '@emotion/styled';
 
-const StatisticsCard = styled.section``;
+export const CardTitle = styled.h2`
+  font-size: ${p => p.theme.fontSizes[4]}px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: ${p => p.theme.space[4]}px;
+`;
 
-const CardTitle = styled.h2``;
+export const StatisticItem = styled.li`
+  flex-grow: 1;
+  padding: ${p => p.theme.space[3]}px;
 
-const StatisticsList = styled.ul``;
+  list-style: none;
+  background-color: ${p => p.backgroundColor};
+  color: ${p => p.theme.colors.textLight};
+`;
 
-const StatisticItem = styled.li``;
+export const StatisticsCaption = styled.span`
+  display: block;
+  margin-bottom: ${p => p.theme.space[2]}px;
+`;
 
-const StatisticsCaption = styled.span``;
-
-const StatisticNumber = styled.span``;
-
-export {
-  StatisticsCard,
-  CardTitle,
-  StatisticsList,
-  StatisticItem,
-  StatisticsCaption,
-  StatisticNumber,
-};
+export const StatisticNumber = styled.span`
+  display: block;
+  font-size: ${p => p.theme.fontSizes[3]}px;
+  font-weight: ${p => p.theme.fontWeights.medium};
+`;
