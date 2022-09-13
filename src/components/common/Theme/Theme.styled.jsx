@@ -1,4 +1,7 @@
 const theme = {
+  borders: {
+    small: '1px solid #cdcdcd',
+  },
   colors: {
     textDark: '#121212',
     textGrey: '#9b9b9b',
@@ -18,6 +21,7 @@ const theme = {
   },
   sizes: {
     cardNormal: '300px',
+    cardWide: '600px',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   shadows: {
