@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 import { Box } from 'components/common/Box/Box.styled';
 import {
-  Description,
   AvatarImg,
   PersonInfo,
   PersonInfoSecondary,
-  StatList,
   StatItem,
   StatCaption,
   StatNumbers,
 } from './Profile.styled';
 
-function Profile({ username, tag, location, avatar, stats }) {
+export function Profile({ username, tag, location, avatar, stats }) {
   return (
     <Box
       width="cardNormal"
@@ -24,14 +22,14 @@ function Profile({ username, tag, location, avatar, stats }) {
       overflow="hidden"
       boxShadow="medium"
     >
-      <Description>
+      <Box>
         <AvatarImg src={avatar} alt="User avatar" />
         <PersonInfo>{username}</PersonInfo>
         <PersonInfoSecondary>{tag}</PersonInfoSecondary>
         <PersonInfoSecondary>{location}</PersonInfoSecondary>
-      </Description>
+      </Box>
 
-      <StatList>
+      <Box as="ul" display="flex" m={0} p={0}>
         <StatItem key="1">
           <StatCaption>Followers</StatCaption>
           <StatNumbers>
@@ -50,7 +48,7 @@ function Profile({ username, tag, location, avatar, stats }) {
             {Number(stats.likes).toLocaleString('en-US')}
           </StatNumbers>
         </StatItem>
-      </StatList>
+      </Box>
     </Box>
   );
 }
@@ -66,5 +64,3 @@ Profile.propTypes = {
     likes: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-export { Profile };

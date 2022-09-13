@@ -14,9 +14,7 @@ const secondaryText = p => css`
   color: ${p.theme.colors.textGrey};
 `;
 
-const Description = styled.div``;
-
-const AvatarImg = styled.img`
+export const AvatarImg = styled.img`
   display: block;
   margin: 0 auto;
   height: auto;
@@ -26,11 +24,11 @@ const AvatarImg = styled.img`
   background-color: ${p => p.theme.colors.backgroundAvatar};
 `;
 
-const PersonInfo = styled.p`
+export const PersonInfo = styled.p`
   ${primaryText};
 `;
 
-const PersonInfoSecondary = styled.p`
+export const PersonInfoSecondary = styled.p`
   ${secondaryText};
 
   &:last-child {
@@ -38,13 +36,7 @@ const PersonInfoSecondary = styled.p`
   }
 `;
 
-const StatList = styled.ul`
-  display: flex;
-  margin: 0;
-  padding: 0;
-`;
-
-const StatItem = styled.li`
+export const StatItem = styled.li`
   flex-shrink: 1;
   width: ${100 / 3}%;
   padding: ${p => p.theme.space[3]}px 0;
@@ -59,26 +51,15 @@ const StatItem = styled.li`
   }
 `;
 
-const StatCaption = styled.span`
+export const StatCaption = styled.span`
   ${secondaryText};
 
   display: block;
   margin: 0 0 ${p => p.theme.space[1]}px;
 `;
 
-const StatNumbers = styled.span`
+export const StatNumbers = styled.span`
   ${primaryText};
 
   display: block;
 `;
-
-export {
-  Description,
-  AvatarImg,
-  PersonInfo,
-  PersonInfoSecondary,
-  StatList,
-  StatItem,
-  StatCaption,
-  StatNumbers,
-};
