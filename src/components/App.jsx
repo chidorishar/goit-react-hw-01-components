@@ -3,7 +3,7 @@ import statisticsData from 'data/data.json';
 import friendsData from 'data/friends.json';
 import transactionData from 'data/transactions.json';
 import { ThemeProvider } from '@emotion/react';
-import { theme } from 'components/common/Theme/Theme.styled';
+import { theme } from 'utils/Theme.styled';
 import {
   Profile,
   Statistics,
