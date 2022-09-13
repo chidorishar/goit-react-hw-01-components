@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { system } from 'styled-system';
 import {
   border,
   color,
@@ -16,5 +17,8 @@ export const Box = styled('div')(
   shadow,
   layout,
   space,
-  typography
+  typography,
+  system({
+    borderCollapse: true,
+  })
 );
