@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import { FriendListStyles } from './FriendList.styled';
+import { Box } from 'components/common/Box/Box.styled';
 import { FriendListItem } from './FriendListItem';
 
-function FriendList({ friends }) {
+export function FriendList({ friends }) {
   return (
-    <FriendListStyles>
+    <Box mr="auto" ml="auto" mt={4} mb={-3} pl={3} width="cardSmall" as="ul">
       {friends.map(friend => (
         <FriendListItem friend={friend} key={friend.id}></FriendListItem>
       ))}
-    </FriendListStyles>
+    </Box>
   );
 }
 
@@ -22,5 +22,3 @@ FriendList.propTypes = {
     })
   ).isRequired,
 };
-
-export { FriendList };
