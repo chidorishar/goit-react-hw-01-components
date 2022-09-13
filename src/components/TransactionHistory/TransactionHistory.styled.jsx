@@ -10,8 +10,6 @@ export const TableHead = styled.thead`
 
 export const TableHeadRow = styled.tr`
   border: ${p => p.theme.borders.small};
-
-  border-color: ${p => p.theme.colors.light};
 `;
 
 export const TableHeadCaption = styled.th`
@@ -21,12 +19,12 @@ export const TableHeadCaption = styled.th`
   border: inherit;
 `;
 
-export const TableBody = styled.tbody``;
+export const TableBody = styled.tbody`
+  border: ${p => p.theme.borders.small};
+`;
 
 export const TableBodyRow = styled.tr`
-  border: ${p => p.theme.borders.small};
-
-  border-color: ${p => p.theme.colors.light};
+  border: inherit;
 
   &:nth-of-type(2n) {
     background-color: ${p => p.theme.colors.backgroundLight};
