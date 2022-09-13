@@ -13,7 +13,7 @@ export const StatisticItem = styled.li`
 
   list-style: none;
   background-color: ${p => p.backgroundColor};
-  color: ${p => p.theme.colors.textLight};
+  color: ${p => p.theme.colors.light};
 `;
 
 export const StatisticsCaption = styled.span`

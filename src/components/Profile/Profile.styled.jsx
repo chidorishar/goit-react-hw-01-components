@@ -5,13 +5,13 @@ const primaryText = p => css`
   font-size: ${p.theme.fontSizes[3]}px;
   font-weight: ${p.theme.fontWeights.bold};
 
-  color: ${p.theme.colors.textDark};
+  color: ${p.theme.colors.dark};
 `;
 const secondaryText = p => css`
   font-size: ${p.theme.fontSizes[2]}px;
   font-weight: ${p.theme.fontWeights.medium};
 
-  color: ${p.theme.colors.textGrey};
+  color: ${p.theme.colors.grey};
 `;
 
 export const AvatarImg = styled.img`
@@ -21,7 +21,7 @@ export const AvatarImg = styled.img`
   width: 50%;
   border-radius: ${p => p.theme.radii.round};
 
-  background-color: ${p => p.theme.colors.backgroundAvatar};
+  background-color: ${p => p.theme.colors.backgroundAccent};
 `;
 
 export const PersonInfo = styled.p`
@@ -42,7 +42,7 @@ export const StatItem = styled.li`
   padding: ${p => p.theme.space[3]}px 0;
 
   list-style: none;
-  background-color: ${p => p.theme.colors.backgroundStats};
+  background-color: ${p => p.theme.colors.backgroundLight};
   border-top: ${p => p.theme.borders.small};
 
   &:nth-of-type(2) {

@@ -9,8 +9,8 @@ export const FriendStatus = styled.span`
 
   background-color: ${p =>
     p.isFriendOnline
-      ? p.theme.colors.onlineStatus.online
-      : p.theme.colors.onlineStatus.offline};
+      ? p.theme.colors.statusCode.green
+      : p.theme.colors.statusCode.red};
 `;
 
 export const FriendAvatarImg = styled.img`
@@ -18,7 +18,7 @@ export const FriendAvatarImg = styled.img`
   margin-right: ${p => p.theme.space[3]}px;
   border-radius: ${p => p.theme.radii.normal};
 
-  background-color: ${p => p.theme.colors.backgroundAvatar};
+  background-color: ${p => p.theme.colors.backgroundAccent};
 `;
 
 export const FriendName = styled.p`
