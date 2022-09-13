@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { getRandomHSLColor } from 'utils/getRandomColor';
 import { Box } from 'components/common/Box/Box.styled';
 import {
@@ -33,3 +34,14 @@ export function Statistics({ title = '', stats }) {
     </Box>
   );
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
