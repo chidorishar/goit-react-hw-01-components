@@ -5,14 +5,23 @@ const theme = {
     backgroundStats: '#f6faff',
     backgroundAvatar: '#c89f36',
   },
-  shadows: {
-    medium: '2px 10px 20px #b6b6b6',
-  },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
     body: 400,
     medium: 500,
     bold: 700,
+  },
+  radii: {
+    none: '0',
+    normal: '5px',
+    round: '50%',
+  },
+  sizes: {
+    cardNormal: '300px',
+  },
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  shadows: {
+    medium: '2px 10px 20px #b6b6b6',
   },
 };
 
