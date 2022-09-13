@@ -1,19 +1,17 @@
 import styled from '@emotion/styled';
-import { defGap } from 'components/common/globalVars';
-import {
-  primaryText,
-  secondaryText,
-} from 'components/common/styles/AllCommonStyles';
+import { css } from '@emotion/react';
 
-const ProfileCard = styled.div`
-  text-align: center;
-  margin: 20px auto;
-  padding: ${defGap}px 0 0;
-  width: 300px;
-  overflow: hidden;
-  border-radius: 5px;
+const primaryText = p => css`
+  font-size: ${p.theme.fontSizes[3]}px;
+  font-weight: ${p.theme.fontWeights.bold};
 
-  box-shadow: 2px 10px 20px #b6b6b6;
+  color: ${p.theme.colors.textDark};
+`;
+const secondaryText = p => css`
+  font-size: ${p.theme.fontSizes[2]}px;
+  font-weight: ${p.theme.fontWeights.medium};
+
+  color: ${p.theme.colors.textGrey};
 `;
 
 const Description = styled.div``;
@@ -23,9 +21,9 @@ const AvatarImg = styled.img`
   margin: 0 auto;
   height: auto;
   width: 50%;
-  border-radius: 50%;
+  border-radius: ${p => p.theme.radii.round};
 
-  background-color: #c89f36;
+  background-color: ${p => p.theme.colors.backgroundAvatar};
 `;
 
 const PersonInfo = styled.p`
@@ -36,7 +34,7 @@ const PersonInfoSecondary = styled.p`
   ${secondaryText};
 
   &:last-child {
-    margin: 0 0 ${defGap}px;
+    margin: 0 0 ${p => p.theme.space[4]}px;
   }
 `;
 
@@ -49,33 +47,32 @@ const StatList = styled.ul`
 const StatItem = styled.li`
   flex-shrink: 1;
   width: ${100 / 3}%;
-  padding: ${defGap / 2}px 0;
+  padding: ${p => p.theme.space[3]}px 0;
 
   list-style: none;
-  background-color: #f6faff;
-  border-top: 1px solid #cdcdcd;
+  background-color: ${p => p.theme.colors.backgroundStats};
+  border-top: ${p => p.theme.borders.small};
 
   &:nth-of-type(2) {
-    border-left: 1px solid #cdcdcd;
-    border-right: 1px solid #cdcdcd;
+    border-left: ${p => p.theme.borders.small};
+    border-right: ${p => p.theme.borders.small};
   }
 `;
 
 const StatCaption = styled.span`
   ${secondaryText};
-  font-weight: 500;
 
   display: block;
-  margin: 0 0 5px;
+  margin: 0 0 ${p => p.theme.space[1]}px;
 `;
 
 const StatNumbers = styled.span`
   ${primaryText};
+
   display: block;
 `;
 
 export {
-  ProfileCard,
   Description,
   AvatarImg,
   PersonInfo,
